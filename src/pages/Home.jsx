@@ -104,7 +104,7 @@ export default function Home() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.7, ease }}
               >
-                <img src="/img/serum-box.png" alt="Nuhua Radiance Serum" loading="lazy" />
+                <img src="/img/serum-box.webp" alt="Nuhua Radiance Serum" loading="lazy" />
               </motion.div>
               <div className="feature-accent" />
             </FadeUp>
@@ -217,13 +217,13 @@ export default function Home() {
           <StaggerGrid className="products-grid-2">
             {[
               {
-                to: '/serum', img: '/img/serum-arch.png',
+                to: '/serum', img: '/img/serum-arch.webp',
                 tag: 'Skincare', name: 'Radiance & Revitalizing Serum',
                 desc: 'Sérum facial con 5 activos de alta eficacia. 32 mL.',
                 price: '$189.000', flag: 'Más vendido', flagClass: 'gold',
               },
               {
-                to: '/vela', img: '/img/serum-candle-lifestyle.png',
+                to: '/vela', img: '/img/serum-candle-lifestyle.webp',
                 imgStyle: { objectPosition: '80% center' },
                 tag: 'Bienestar', name: 'Ritual Candle',
                 desc: 'Bergamota, Lavanda y Cedro del Atlas. Cera vegetal. 200 g.',
@@ -260,7 +260,7 @@ export default function Home() {
         <div className="container">
           <div className="kit-grid">
             <ImageReveal
-              src="/img/serum-candle-lifestyle.png"
+              src="/img/serum-candle-lifestyle.webp"
               alt="Kit Ritual nuhua"
               style={{ aspectRatio: '1' }}
               imgStyle={{ objectFit: 'cover' }}
@@ -320,7 +320,7 @@ export default function Home() {
         <div className="container">
           <div className="feature reverse">
             <ImageReveal
-              src="/img/serum-hand.png"
+              src="/img/serum-hand.webp"
               alt="Sérum nuhua en manos"
               className="feature-media"
               style={{ aspectRatio: '4/5' }}

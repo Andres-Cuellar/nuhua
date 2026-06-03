@@ -44,7 +44,7 @@ export default function Productos() {
                   whileHover="hover"
                 >
                   <motion.img
-                    src="/img/serum-lifestyle2.png"
+                    src="/img/serum-lifestyle2.webp"
                     alt="Radiance Serum nuhua"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 35%' }}
                     variants={{ hover: { scale: 1.03 } }}
@@ -85,7 +85,7 @@ export default function Productos() {
             {[
               {
                 to: '/vela',
-                img: '/img/serum-candle-lifestyle.png',
+                img: '/img/serum-candle-lifestyle.webp',
                 imgStyle: { objectPosition: '80% center' },
                 tag: 'Bienestar · Vela',
                 name: 'Ritual Candle',
@@ -94,7 +94,7 @@ export default function Productos() {
               },
               {
                 to: '/kit',
-                img: '/img/serum-flat.png',
+                img: '/img/serum-flat.webp',
                 imgStyle: {},
                 flag: 'Kit',
                 tag: 'Experiencia · Kit',

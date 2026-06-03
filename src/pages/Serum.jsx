@@ -10,10 +10,10 @@ import {
 const ease = [0.4, 0, 0.2, 1]
 
 const thumbs = [
-  { src: '/img/serum-lifestyle3.png', alt: 'Lifestyle' },
-  { src: '/img/serum-box.png',        alt: 'Con caja' },
-  { src: '/img/serum-arch.png',       alt: 'Solo' },
-  { src: '/img/serum-tray.png',       alt: 'En bandeja' },
+  { src: '/img/serum-lifestyle3.webp', alt: 'Lifestyle' },
+  { src: '/img/serum-box.webp',        alt: 'Con caja' },
+  { src: '/img/serum-arch.webp',       alt: 'Solo' },
+  { src: '/img/serum-tray.webp',       alt: 'En bandeja' },
   { src: '/img/bg-3.webp',            alt: 'Aplicando' },
   { src: '/img/serum-white.jpeg',     alt: 'Blanco' },
 ]
@@ -210,18 +210,19 @@ export default function Serum() {
             {/* Claims principales */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, margin: '16px 0 20px' }}>
               {[
-                { icon: '💧', label: 'Hidratación profunda' },
-                { icon: '✨', label: 'Piel firme y luminosa' },
-                { icon: '🌿', label: 'Paraben Free' },
-                { icon: '☀️', label: 'Día y noche' },
-              ].map(c => (
-                <span key={c.label} style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 6,
-                  padding: '6px 12px', border: '1px solid var(--border)',
-                  fontSize: 11, color: 'var(--medium)', fontWeight: 500,
-                  letterSpacing: '0.05em',
+                'Hidratación profunda',
+                'Piel firme y luminosa',
+                'Paraben Free',
+                'Día y noche',
+              ].map(label => (
+                <span key={label} style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 8,
+                  padding: '6px 14px', border: '1px solid var(--border)',
+                  fontFamily: 'var(--mono)', fontSize: 9, color: 'var(--medium)',
+                  fontWeight: 400, letterSpacing: '0.14em', textTransform: 'uppercase',
                 }}>
-                  <span>{c.icon}</span>{c.label}
+                  <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--gold)', flexShrink: 0 }} />
+                  {label}
                 </span>
               ))}
             </div>
@@ -276,7 +277,7 @@ export default function Serum() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            {['/img/serum-hero.png', '/img/serum-tray.png', '/img/serum-flat.png'].map(src => (
+            {['/img/serum-hero.webp', '/img/serum-tray.webp', '/img/serum-flat.webp'].map(src => (
               <motion.img
                 key={src} src={src} alt="" loading="lazy"
                 style={{ width: '100%', aspectRatio: '1', objectFit: 'cover' }}
@@ -318,7 +319,7 @@ export default function Serum() {
         <div className="container">
           <div className="kit-grid">
             <FadeUp className="kit-media" style={{ aspectRatio: '1', overflow: 'hidden' }}>
-              <img src="/img/serum-candle-lifestyle.png" alt="Kit Ritual" loading="lazy" />
+              <img src="/img/serum-candle-lifestyle.webp" alt="Kit Ritual" loading="lazy" />
             </FadeUp>
             <FadeUp delay={0.12} className="kit-body">
               <div className="kit-eyebrow">Completa tu ritual</div>
@@ -344,8 +345,8 @@ export default function Serum() {
           <div className="label text-gold mb-16">También te puede interesar</div>
           <StaggerGrid className="related-grid">
             {[
-              { to: '/vela', img: '/img/serum-candle-lifestyle.png', imgStyle: { objectPosition: '80% center' }, tag: 'Bienestar', name: 'Ritual Candle', price: '$89.000' },
-              { to: '/kit',  img: '/img/serum-flat.png', tag: 'Kit', name: 'Kit Ritual nuhua', price: '$259.000' },
+              { to: '/vela', img: '/img/serum-candle-lifestyle.webp', imgStyle: { objectPosition: '80% center' }, tag: 'Bienestar', name: 'Ritual Candle', price: '$89.000' },
+              { to: '/kit',  img: '/img/serum-flat.webp', tag: 'Kit', name: 'Kit Ritual nuhua', price: '$259.000' },
               { to: '/sobre-nosotros', bg: 'var(--sand)', tag: 'nuhua skin', name: 'Nuestra historia', desc: 'La filosofía detrás de cada fórmula.' },
             ].map(p => (
               <StaggerItem key={p.to}>

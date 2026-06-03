@@ -7,9 +7,9 @@ import Accordion from '../components/Accordion'
 const ease = [0.4, 0, 0.2, 1]
 
 const thumbs = [
-  { src: '/img/serum-candle-lifestyle.png', style: { objectPosition: '75% center' } },
+  { src: '/img/serum-candle-lifestyle.webp', style: { objectPosition: '75% center' } },
   { src: '/img/candle-info.jpeg',           style: {} },
-  { src: '/img/serum-flat.png',             style: {} },
+  { src: '/img/serum-flat.webp',             style: {} },
 ]
 
 const accordionItems = [

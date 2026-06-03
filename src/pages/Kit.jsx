@@ -9,7 +9,7 @@ const ease = [0.4, 0, 0.2, 1]
 const whys = [
   { num: '$19k', title: 'Ahorro real', desc: 'Vs. comprarlos por separado. El kit es la forma más inteligente de comenzar tu ritual.' },
   { num: '2 en 1', title: 'Cuidado integral', desc: 'Piel nutrida por fuera. Mente tranquila por dentro. Un ritual completo.' },
-  { num: '🎁', title: 'Regalo perfecto', desc: 'Presentación premium. Ideal para regalar o darte el regalo que mereces.' },
+  { num: '◇', title: 'Regalo perfecto', desc: 'Presentación premium. Ideal para regalar o darte el regalo que mereces.' },
   { num: 'CO', title: 'Hecho en Colombia', desc: 'Formulación local de alta calidad. Apoyando la industria cosmética colombiana.' },
 ]
 
@@ -121,7 +121,7 @@ export default function Kit() {
           <div className="feature reverse">
             <FadeUp className="feature-media">
               <div className="feature-media-inner" style={{background:'var(--sand)'}}>
-                <img src="/img/serum-candle-lifestyle.png" alt="Ritual Candle" loading="lazy" style={{objectPosition:'80% center'}} />
+                <img src="/img/serum-candle-lifestyle.webp" alt="Ritual Candle" loading="lazy" style={{objectPosition:'80% center'}} />
               </div>
             </FadeUp>
             <FadeUp delay={0.12} className="feature-body">
