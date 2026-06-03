@@ -56,7 +56,14 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span className="footer-copy">© 2024 nuhua skin. Colombia.</span>
+          <span className="footer-copy">© 2026 nuhua skin. Colombia.</span>
+          <span className="footer-copy" style={{ opacity: 0.5 }}>
+            Developed by{' '}
+            <a href="https://creamostuweb.co" target="_blank" rel="noopener noreferrer"
+               style={{ borderBottom: '1px solid currentColor', paddingBottom: 1, transition: 'opacity 0.3s' }}>
+              creamostuweb.co
+            </a>
+          </span>
           <div className="footer-legal">
             <a href="#">Términos y condiciones</a>
             <a href="#">Política de privacidad</a>
