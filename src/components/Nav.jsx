@@ -84,6 +84,15 @@ export default function Nav() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to="/carrito" className="nav-cart" aria-label="Carrito">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+              </Link>
+            </li>
           </ul>
 
           <button className="nav-burger" aria-label="Menu" onClick={toggleMenu}>
@@ -137,6 +146,22 @@ export default function Nav() {
                   </Link>
                 </motion.li>
               ))}
+              <motion.li
+                initial={{ opacity: 0, x: -16 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: links.length * 0.07, duration: 0.3 }}
+              >
+                <Link
+                  to="/carrito"
+                  style={{
+                    fontFamily: 'var(--serif)', fontSize: '2rem',
+                    fontWeight: 400, color: 'var(--dark)',
+                  }}
+                  onClick={() => { setOpen(false); document.body.style.overflow = '' }}
+                >
+                  Carrito
+                </Link>
+              </motion.li>
             </ul>
           </motion.div>
         )}

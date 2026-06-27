@@ -94,6 +94,11 @@ h1,h2,h3,h4 { font-family: var(--display); font-weight: 300; line-height: 1.1; l
 .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: currentColor; transition: width var(--t); }
 .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
 .nav.on-dark .nav-links a { color: rgba(255,255,255,0.85); }
+.nav-cart { display: flex; align-items: center; color: var(--dark); transition: color var(--t); }
+.nav-cart:hover { color: var(--gold); }
+.nav-cart::after { display: none; }
+.nav.on-dark .nav-cart { color: rgba(255,255,255,0.85); }
+.nav.on-dark .nav-cart:hover { color: var(--gold); }
 .nav-burger { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 28px; height: 28px; padding: 0; background: none; border: none; cursor: pointer; }
 .nav-burger span { display: block; height: 1px; background: var(--dark); transition: var(--t); }
 .nav.on-dark .nav-burger span { background: var(--white); }
