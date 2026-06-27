@@ -265,6 +265,12 @@ export default function SobreNosotros() {
             }}>
               <div style={{ background: 'var(--cream)', padding: '40px 32px' }}>
                 <FadeUp>
+                  <img
+                    src="/img/close-up-portrait-of-beautiful-half-naked-woman-us-2026-03-24-02-57-33-utc.webp"
+                    alt="Foto de Ana"
+                    style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', borderRadius: 12, marginBottom: 20 }}
+                    loading="lazy"
+                  />
                   <div style={{
                     fontFamily: 'var(--display)', fontSize: '1.3rem', fontWeight: 200,
                     letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 8,
@@ -281,6 +287,12 @@ export default function SobreNosotros() {
               </div>
               <div style={{ background: 'var(--cream)', padding: '40px 32px' }}>
                 <FadeUp>
+                  <img
+                    src="/img/smiling-women-relaxing-with-skincare-treatment-at-2026-03-24-07-01-32-utc.webp"
+                    alt="Foto de Julieth"
+                    style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', borderRadius: 12, marginBottom: 20 }}
+                    loading="lazy"
+                  />
                   <div style={{
                     fontFamily: 'var(--display)', fontSize: '1.3rem', fontWeight: 200,
                     letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 8,
