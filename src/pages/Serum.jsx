@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Page, FadeUp, StaggerGrid, StaggerItem } from '../motion'
 import Accordion from '../components/Accordion'
+import { useCart } from '../context/CartContext'
 import {
   IconHydration, IconVitamin, IconBotanical, IconShield, IconPeptide,
 } from '../components/IngredientIcons'
@@ -156,8 +157,10 @@ export default function Serum() {
   const [active, setActive] = useState(0)
   const [qty, setQty]       = useState(1)
   const [added, setAdded]   = useState(false)
+  const { addItem }         = useCart()
 
   const handleAdd = () => {
+    addItem({ productId: 59, quantity: qty })
     setAdded(true)
     setTimeout(() => setAdded(false), 2200)
   }

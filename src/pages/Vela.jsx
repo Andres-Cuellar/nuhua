@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Page, FadeUp } from '../motion'
 import Accordion from '../components/Accordion'
+import { useCart } from '../context/CartContext'
 
 const ease = [0.4, 0, 0.2, 1]
 
@@ -55,6 +56,7 @@ export default function Vela() {
   const [active, setActive] = useState(0)
   const [qty, setQty]       = useState(1)
   const [added, setAdded]   = useState(false)
+  const { addItem }         = useCart()
 
   return (
     <Page>
@@ -120,7 +122,7 @@ export default function Vela() {
               <motion.button
                 className="btn btn-dark btn-lg"
                 style={{flex:2,pointerEvents:added?'none':'auto'}}
-                onClick={() => { setAdded(true); setTimeout(() => setAdded(false), 2200) }}
+                onClick={() => { addItem({ productId: 60, quantity: qty }); setAdded(true); setTimeout(() => setAdded(false), 2200) }}
                 whileTap={{ scale: 0.97 }}
               >
                 {added ? '✓ Agregado' : 'Agregar al carrito'}

@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import { CartProvider } from './context/CartContext'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -8,13 +9,15 @@ import Productos from './pages/Productos'
 import Serum from './pages/Serum'
 import Vela from './pages/Vela'
 import Kit from './pages/Kit'
+import Carrito from './pages/Carrito'
+import Checkout from './pages/Checkout'
 import SobreNosotros from './pages/SobreNosotros'
 import Contacto from './pages/Contacto'
 
 export default function App() {
   const location = useLocation()
   return (
-    <>
+    <CartProvider>
       <ScrollToTop />
       <Nav />
       <AnimatePresence mode="wait" initial={false}>
@@ -24,11 +27,13 @@ export default function App() {
           <Route path="/serum"             element={<Serum />} />
           <Route path="/vela"              element={<Vela />} />
           <Route path="/kit"               element={<Kit />} />
+          <Route path="/carrito"           element={<Carrito />} />
+          <Route path="/checkout"          element={<Checkout />} />
           <Route path="/sobre-nosotros"    element={<SobreNosotros />} />
           <Route path="/contacto"          element={<Contacto />} />
         </Routes>
       </AnimatePresence>
       <Footer />
-    </>
+    </CartProvider>
   )
 }

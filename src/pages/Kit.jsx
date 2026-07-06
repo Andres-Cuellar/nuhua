@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Page, FadeUp, StaggerGrid, StaggerItem } from '../motion'
 import Strip from '../components/Strip'
+import { useCart } from '../context/CartContext'
 
 const ease = [0.4, 0, 0.2, 1]
 
@@ -15,6 +16,13 @@ const whys = [
 
 export default function Kit() {
   const [added, setAdded] = useState(false)
+  const { addItem }       = useCart()
+
+  const handleAdd = () => {
+    addItem({ productId: 61, quantity: 1 })
+    setAdded(true)
+    setTimeout(() => setAdded(false), 2200)
+  }
 
   return (
     <Page>
@@ -70,7 +78,7 @@ export default function Kit() {
               <motion.button
                 className="btn btn-gold btn-lg"
                 style={{pointerEvents:added?'none':'auto'}}
-                onClick={() => { setAdded(true); setTimeout(() => setAdded(false), 2200) }}
+                onClick={handleAdd}
                 whileTap={{ scale: 0.97 }}
               >
                 {added ? '✓ Agregado' : 'Agregar kit al carrito'}
@@ -192,7 +200,7 @@ export default function Kit() {
               <motion.button
                 className="btn btn-gold btn-lg"
                 style={{pointerEvents:added?'none':'auto'}}
-                onClick={() => { setAdded(true); setTimeout(() => setAdded(false), 2200) }}
+                onClick={handleAdd}
                 whileTap={{ scale: 0.97 }}
               >
                 {added ? '✓ Agregado' : 'Agregar al carrito'}

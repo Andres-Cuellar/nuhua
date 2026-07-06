@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
+import { useCart } from '../context/CartContext'
 
 const links = [
   { to: '/',               label: 'Inicio' },
@@ -14,6 +15,7 @@ export default function Nav() {
   const [open, setOpen]         = useState(false)
   const location = useLocation()
   const isHome   = location.pathname === '/'
+  const { totalItems } = useCart()
 
   const { scrollYProgress } = useScroll()
 
@@ -85,12 +87,37 @@ export default function Nav() {
               </li>
             ))}
             <li>
-              <Link to="/carrito" className="nav-cart" aria-label="Carrito">
+              <Link to="/carrito" className="nav-cart" aria-label="Carrito" style={{ position: 'relative' }}>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
                   <line x1="3" y1="6" x2="21" y2="6"/>
                   <path d="M16 10a4 4 0 0 1-8 0"/>
                 </svg>
+                {totalItems > 0 && (
+                  <motion.span
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    style={{
+                      position: 'absolute',
+                      top: -6,
+                      right: -8,
+                      width: 16,
+                      height: 16,
+                      borderRadius: '50%',
+                      background: 'var(--gold)',
+                      color: 'var(--white)',
+                      fontSize: 9,
+                      fontWeight: 600,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      lineHeight: 1,
+                      fontFamily: 'var(--sans)',
+                    }}
+                  >
+                    {totalItems}
+                  </motion.span>
+                )}
               </Link>
             </li>
           </ul>
