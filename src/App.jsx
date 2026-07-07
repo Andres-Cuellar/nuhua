@@ -13,13 +13,15 @@ import Carrito from './pages/Carrito'
 import Checkout from './pages/Checkout'
 import SobreNosotros from './pages/SobreNosotros'
 import Contacto from './pages/Contacto'
+import ComingSoon from './pages/ComingSoon'
 
 export default function App() {
   const location = useLocation()
+  const isComingSoon = location.pathname === '/muy-pronto'
   return (
     <CartProvider>
       <ScrollToTop />
-      <Nav />
+      {!isComingSoon && <Nav />}
       <AnimatePresence mode="wait" initial={false}>
         <Routes location={location} key={location.pathname}>
           <Route path="/"                  element={<Home />} />
@@ -31,9 +33,10 @@ export default function App() {
           <Route path="/checkout"          element={<Checkout />} />
           <Route path="/sobre-nosotros"    element={<SobreNosotros />} />
           <Route path="/contacto"          element={<Contacto />} />
+          <Route path="/muy-pronto"        element={<ComingSoon />} />
         </Routes>
       </AnimatePresence>
-      <Footer />
+      {!isComingSoon && <Footer />}
     </CartProvider>
   )
 }

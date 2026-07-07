@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { Page, FadeUp, StaggerGrid, StaggerItem, RevealText, LineReveal } from '../motion'
+import { Page, FadeUp, StaggerGrid, StaggerItem, RevealText, LineReveal, ImageReveal } from '../motion'
 import {
   IconHydration, IconVitamin, IconBotanical, IconShield, IconPeptide,
 } from '../components/IngredientIcons'
@@ -106,265 +105,191 @@ export default function SobreNosotros() {
       {/* ── Nuestra Historia ──────────────────── */}
       <section className="section" style={{ background: 'var(--warm)' }}>
         <div className="container">
-          <FadeUp className="text-center" style={{ marginBottom: 80 }}>
-            <div className="label text-gold" style={{ marginBottom: 16 }}>Nuestra Historia</div>
-            <RevealText>
-              <h2 className="heading-l">N H U A S K I N</h2>
-            </RevealText>
+
+          {/* SPREAD 1 — El origen + La pregunta | Imagen */}
+          <FadeUp>
+            <div className="story-text-media">
+              <div>
+                <div className="story-centered" style={{ margin: '0 0 28px', textAlign: 'left' }}>
+                  <div className="label text-gold" style={{ marginBottom: 16 }}>Nuestra Historia</div>
+                  <RevealText>
+                    <h2 className="heading-l" style={{ marginBottom: 0 }}>Dos mujeres,<br />una convicción</h2>
+                  </RevealText>
+                </div>
+                <div className="story-label">El origen</div>
+                <p className="story-text">
+                  Algunas historias comienzan con una idea. La nuestra comenzó con una convicción: el cuidado de la piel no debería ser complicado para ser efectivo. Con esa visión en mente, dos mujeres apasionadas por la industria cosmética decidieron emprender un camino que, cinco años después, daría vida a NHUA.
+                </p>
+                <div className="story-label" style={{ marginTop: 40 }}>La pregunta</div>
+                <p className="story-text" style={{ marginBottom: 0 }}>
+                  Después de la pandemia, Ana reflexionaba sobre los años que había dedicado a la industria cosmética. Conocía el mundo cosmético y dermocosmético por dentro. Años de industria le habían enseñado cómo funcionan los productos, qué prometen y — muchas veces — qué no cumplen. Había visto cómo las rutinas crecían: un sérum, una crema, un contorno de ojos, otro suero para esto, otro para aquello. Y en algún momento dejó de normalizar esa complejidad y empezó a hacerse una pregunta distinta.
+                </p>
+              </div>
+              <ImageReveal
+                src="/img/woman-holding-serum-bottle-in-studio-setting-2026-01-06-00-29-42-utc.webp"
+                alt=""
+                style={{ aspectRatio: '4/5' }}
+              />
+            </div>
           </FadeUp>
 
-          <div style={{ maxWidth: 680, margin: '0 auto' }}>
-            {/* ── Beat: El origen ── */}
-            <FadeUp style={{ marginBottom: 72 }}>
-              <div style={{
-                fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.25em',
-                textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 20,
-              }}>
-                El origen
-              </div>
-              <p style={{ fontSize: 14, color: 'var(--medium)', lineHeight: 2, marginBottom: 20 }}>
-                Algunas historias comienzan con una idea. La nuestra comenzó con una convicción: el cuidado de la piel no debería ser complicado para ser efectivo.
+          {/* SPREAD 2 — Pull quote centered */}
+          <FadeUp>
+            <div className="story-quote">
+              <RevealText delay={0.04}>
+                <p className="story-pull-text" style={{ padding: '0 0 20px' }}>
+                  ¿Y si los activos correctos, seleccionados con rigor y formulados con inteligencia, pudieran vivir en un solo producto?
+                </p>
+              </RevealText>
+              <p className="story-pull-sub">
+                ¿Un producto que no fuera un compromiso sino una decisión? Uno que reemplazara el sérum, la crema y el contorno — no porque fuera más fácil de vender, sino porque estuviera genuinamente hecho para eso.
               </p>
-              <p style={{ fontSize: 14, color: 'var(--medium)', lineHeight: 2 }}>
-                Con esa visión en mente, dos mujeres apasionadas por la industria cosmética decidieron emprender un camino que, cinco años después, daría vida a NHUA.
-              </p>
-            </FadeUp>
+            </div>
+          </FadeUp>
 
-            {/* ── Beat: La pregunta ── */}
-            <FadeUp style={{ marginBottom: 72 }}>
-              <div style={{
-                fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.25em',
-                textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 20,
-              }}>
-                La pregunta
-              </div>
-              <p style={{ fontSize: 14, color: 'var(--medium)', lineHeight: 2, marginBottom: 20 }}>
-                Después de la pandemia, Ana reflexionaba sobre los años que había dedicado a la industria cosmética. Conocía el mundo cosmético y dermocosmético por dentro. Años de industria le habían enseñado cómo funcionan los productos, qué prometen y — muchas veces — qué no cumplen. Había visto cómo las rutinas crecían: un sérum, una crema, un contorno de ojos, otro suero para esto, otro para aquello. Y en algún momento dejó de normalizar esa complejidad y empezó a hacerse una pregunta distinta.
-              </p>
-              <p style={{
-                fontSize: 'clamp(1.05rem, 1.6vw, 1.2rem)', color: 'var(--dark)',
-                lineHeight: 1.7, fontFamily: 'var(--serif)', fontStyle: 'italic',
-              }}>
-                ¿Y si los activos correctos, seleccionados con rigor y formulados con inteligencia, pudieran vivir en un solo producto?
-              </p>
-            </FadeUp>
+          <div className="story-divider" />
 
-            {/* ── Beat: El encuentro ── */}
-            <FadeUp style={{ marginBottom: 72 }}>
-              <div style={{
-                fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.25em',
-                textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 20,
-              }}>
-                El encuentro
-              </div>
-              <p style={{ fontSize: 14, color: 'var(--medium)', lineHeight: 2 }}>
-                Esa pregunta la llevó a Julieth. Dermofarmacéutica. Especialista en formulación cosmética. Alguien que estudió años para entender no solo qué ingredientes funcionan, sino por qué, en qué concentración, con qué otros activos se potencian y cuándo una fórmula realmente merece llamarse eficaz. En ese momento, Julieth acababa de culminar su maestría en Dermofarmacia y Formulación Cosmética y soñaba con aplicar todo su conocimiento en un proyecto propio construido desde la ciencia, la innovación y el bienestar.
-              </p>
-            </FadeUp>
-
-            {/* ── Pull quote ── */}
-            <FadeUp>
-              <div style={{
-                margin: '0 auto 72px',
-                padding: '40px 48px',
-                background: '#fff',
-                borderLeft: '3px solid var(--gold)',
-              }}>
+          {/* SPREAD 3 — Imagen | El encuentro + quote (REVERSED) */}
+          <FadeUp>
+            <div className="story-media-text">
+              <ImageReveal
+                src="/img/serum-bottle-with-gold-flakes-and-water-droplets-2026-03-25-09-20-56-utc.webp"
+                alt=""
+                style={{ aspectRatio: '4/5' }}
+              />
+              <div>
+                <div className="story-label">El encuentro</div>
+                <p className="story-text">
+                  Esa pregunta la llevó a Julieth. Dermofarmacéutica. Especialista en formulación cosmética. Alguien que estudió años para entender no solo qué ingredientes funcionan, sino por qué, en qué concentración, con qué otros activos se potencian y cuándo una fórmula realmente merece llamarse eficaz. En ese momento, Julieth acababa de culminar su maestría en Dermofarmacia y Formulación Cosmética y soñaba con aplicar todo su conocimiento en un proyecto propio construido desde la ciencia, la innovación y el bienestar.
+                </p>
+                <div className="story-pull-rule" style={{ margin: '40px 0 0 0' }} />
                 <RevealText delay={0.04}>
-                  <p style={{
-                    fontFamily: 'var(--display)', fontSize: 'clamp(1.1rem, 2.2vw, 1.4rem)',
-                    fontWeight: 200, letterSpacing: '0.04em', lineHeight: 1.5,
-                    color: 'var(--dark)', fontStyle: 'italic',
-                  }}>
+                  <p className="story-pull-text" style={{ padding: '28px 0 0' }}>
                     "No queríamos hacer otro producto más. Queríamos hacer el que te preguntarías por qué nadie había hecho antes."
                   </p>
                 </RevealText>
               </div>
-            </FadeUp>
+            </div>
+          </FadeUp>
 
-            {/* ── Image 1 ── */}
-            <FadeUp>
-              <motion.div
-                style={{ marginBottom: 72 }}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.9 }}
-              >
-                <img
-                  src="/img/woman-holding-serum-bottle-in-studio-setting-2026-01-06-00-29-42-utc.webp"
-                  alt=""
-                  style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', display: 'block' }}
-                  loading="lazy"
-                />
-              </motion.div>
-            </FadeUp>
-
-            {/* ── Beat: El camino ── */}
-            <FadeUp style={{ marginBottom: 72 }}>
-              <div style={{
-                fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.25em',
-                textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 20,
-              }}>
-                El camino
+          {/* SPREAD 4 — El camino | Imagen 16:9 + Pilares */}
+          <FadeUp>
+            <div className="story-text-media">
+              <div>
+                <div className="story-label">El camino</div>
+                <p className="story-text">
+                  Así comenzó NHUA. Nuestro sueño inicial era lanzar una línea completa de cinco productos formulados bajo nuestros propios estándares. Sin embargo, el camino del emprendimiento nos enseñó que las grandes ideas también requieren paciencia, resiliencia y la capacidad de empezar de nuevo cuando es necesario.
+                </p>
+                <p className="story-text">
+                  Lo que vino después fue real: aliados que no dieron la talla, reformulaciones desde cero, decisiones que costaron. Hubo momentos en los que tuvimos que replantear el camino, buscar nuevas alternativas y volver a comenzar. Pero también fue claro: había aspectos en los que nunca íbamos a ceder. La concentración de activos. La compatibilidad entre ingredientes. La honestidad de que cada gota tuviera un propósito. La convicción de que si íbamos a lanzar algo al mundo, tenía que ser algo en lo que creyéramos con certeza.
+                </p>
+                <p className="story-text" style={{ marginBottom: 0 }}>
+                  Cada obstáculo nos permitió definir con mayor claridad aquello en lo que creemos: fórmulas inteligentes, ingredientes cuidadosamente seleccionados y productos diseñados para responder a necesidades reales.
+                </p>
               </div>
-              <p style={{ fontSize: 14, color: 'var(--medium)', lineHeight: 2, marginBottom: 20 }}>
-                Así comenzó NHUA. Nuestro sueño inicial era lanzar una línea completa de cinco productos formulados bajo nuestros propios estándares. Sin embargo, el camino del emprendimiento nos enseñó que las grandes ideas también requieren paciencia, resiliencia y la capacidad de empezar de nuevo cuando es necesario.
-              </p>
-              <p style={{ fontSize: 14, color: 'var(--medium)', lineHeight: 2, marginBottom: 20 }}>
-                Lo que vino después fue real: aliados que no dieron la talla, reformulaciones desde cero, decisiones que costaron. Hubo momentos en los que tuvimos que replantear el camino, buscar nuevas alternativas y volver a comenzar. Pero también fue claro: había aspectos en los que nunca íbamos a ceder. La concentración de activos. La compatibilidad entre ingredientes. La honestidad de que cada gota tuviera un propósito. La convicción de que si íbamos a lanzar algo al mundo, tenía que ser algo en lo que creyéramos con certeza.
-              </p>
-              <p style={{ fontSize: 14, color: 'var(--medium)', lineHeight: 2 }}>
-                Cada obstáculo nos permitió definir con mayor claridad aquello en lo que creemos: fórmulas inteligentes, ingredientes cuidadosamente seleccionados y productos diseñados para responder a necesidades reales.
-              </p>
-            </FadeUp>
-
-            {/* ── Nuestros pilares ── */}
-            <StaggerGrid style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1px', background: 'var(--border)', marginBottom: 80 }}>
-              {[
-                { num: '01', title: 'Activos seleccionados con obsesión' },
-                { num: '02', title: 'Formulación con propósito real' },
-                { num: '03', title: 'Un producto que reemplaza tres o más' },
-              ].map(item => (
-                <StaggerItem key={item.num}>
-                  <div style={{ background: 'var(--cream)', padding: '32px 40px', display: 'flex', alignItems: 'center', gap: 24 }}>
-                    <span style={{
-                      fontFamily: 'var(--mono)', fontSize: 10,
-                      letterSpacing: '0.2em', color: 'var(--gold)',
-                    }}>
-                      {item.num}
-                    </span>
-                    <span style={{
-                      fontFamily: 'var(--display)', fontSize: '0.95rem',
-                      fontWeight: 300, letterSpacing: '0.06em',
-                      textTransform: 'uppercase',
-                    }}>
-                      {item.title}
-                    </span>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerGrid>
-
-            {/* ── Image 2 ── */}
-            <FadeUp>
-              <motion.div
-                style={{ marginBottom: 72 }}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.9 }}
-              >
-                <img
+              <div>
+                <ImageReveal
                   src="/img/serum-bottle-with-gold-flakes-and-water-droplets-2026-03-25-09-20-56-utc.webp"
                   alt=""
-                  style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', display: 'block' }}
+                  style={{ aspectRatio: '16/9', marginBottom: 32 }}
+                />
+                <StaggerGrid style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1px', background: 'var(--border)' }}>
+                  {[
+                    { num: '01', title: 'Activos seleccionados con obsesión' },
+                    { num: '02', title: 'Formulación con propósito real' },
+                    { num: '03', title: 'Un producto que reemplaza tres o más' },
+                  ].map(item => (
+                    <StaggerItem key={item.num}>
+                      <div style={{ background: 'var(--cream)', padding: '28px 32px', display: 'flex', alignItems: 'center', gap: 20 }}>
+                        <span style={{ fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.2em', color: 'var(--gold)' }}>
+                          {item.num}
+                        </span>
+                        <span style={{ fontFamily: 'var(--display)', fontSize: '0.9rem', fontWeight: 300, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                          {item.title}
+                        </span>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerGrid>
+              </div>
+            </div>
+          </FadeUp>
+
+          <div className="story-divider" />
+
+          {/* SPREAD — Imagen | El resultado */}
+          <FadeUp>
+            <div className="story-media-text">
+              <ImageReveal
+                src="/img/woman-holding-serum-bottle-in-studio-setting-2026-01-06-00-29-42-utc.webp"
+                alt=""
+                style={{ aspectRatio: '4/5' }}
+              />
+              <div>
+                <div className="story-label">El resultado</div>
+                <p className="story-text">
+                  Después de cinco años de trabajo, investigación, aprendizaje y perseverancia, logramos materializar nuestro primer lanzamiento: un sérum formulado para el contorno de ojos, la hidratación y la potencia de un sérum en uno solo. No por minimalismo de tendencia, sino porque con la ciencia correcta, no necesitas más.
+                </p>
+                <p className="story-text" style={{ marginBottom: 0 }}>
+                  NHUA representa mucho más que cosmética. Es la unión entre la ciencia y el bienestar, entre quien conoce la industria y quien conoce la fórmula. Entre la visión de lo que debería existir y el conocimiento de cómo hacerlo realidad. Es la prueba de que los sueños construidos con pasión, disciplina y propósito encuentran su camino.
+                </p>
+              </div>
+            </div>
+          </FadeUp>
+
+          <div className="story-divider" />
+
+          {/* Fundadoras */}
+          <FadeUp>
+            <div className="story-founders">
+              <div className="story-founder">
+                <img
+                  src="/img/close-up-portrait-of-beautiful-half-naked-woman-us-2026-03-24-02-57-33-utc.webp"
+                  alt="Ana Cristina"
+                  className="story-founder-img"
                   loading="lazy"
                 />
-              </motion.div>
-            </FadeUp>
-
-            {/* ── Beat: El resultado ── */}
-            <FadeUp style={{ marginBottom: 72 }}>
-              <div style={{
-                fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.25em',
-                textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 20,
-              }}>
-                El resultado
-              </div>
-              <p style={{ fontSize: 14, color: 'var(--medium)', lineHeight: 2, marginBottom: 20 }}>
-                Después de cinco años de trabajo, investigación, aprendizaje y perseverancia, logramos materializar nuestro primer lanzamiento: un sérum formulado para el contorno de ojos, la hidratación y la potencia de un sérum en uno solo. No por minimalismo de tendencia, sino porque con la ciencia correcta, no necesitas más.
-              </p>
-              <p style={{ fontSize: 14, color: 'var(--medium)', lineHeight: 2 }}>
-                NHUA representa mucho más que cosmética. Es la unión entre la ciencia y el bienestar, entre quien conoce la industria y quien conoce la fórmula. Entre la visión de lo que debería existir y el conocimiento de cómo hacerlo realidad. Es la prueba de que los sueños construidos con pasión, disciplina y propósito encuentran su camino.
-              </p>
-            </FadeUp>
-
-            {/* ── Fundadoras ── */}
-            <FadeUp style={{ marginBottom: 72 }}>
-              <div style={{
-                fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.25em',
-                textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 24,
-              }}>
-                Las fundadoras
-              </div>
-              <div style={{
-                display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1px',
-                background: 'var(--border)',
-              }}>
-                <div style={{ background: 'var(--cream)', padding: '40px 32px' }}>
-                  <img
-                    src="/img/close-up-portrait-of-beautiful-half-naked-woman-us-2026-03-24-02-57-33-utc.webp"
-                    alt="Foto de Ana"
-                    style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', borderRadius: 12, marginBottom: 20 }}
-                    loading="lazy"
-                  />
-                  <div style={{
-                    fontFamily: 'var(--display)', fontSize: '1.3rem', fontWeight: 200,
-                    letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 8,
-                  }}>Ana Cristina</div>
-                  <div style={{
-                    fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.15em',
-                    textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 20,
-                  }}>Industria cosmética y dermocosmética</div>
-                  <LineReveal style={{ maxWidth: 40, marginBottom: 16 }} />
-                  <p style={{ fontSize: 12, color: 'var(--medium)', lineHeight: 1.8 }}>
-                    Visión · Propósito · Estrategia
-                  </p>
-                </div>
-                <div style={{ background: 'var(--cream)', padding: '40px 32px' }}>
-                  <img
-                    src="/img/smiling-women-relaxing-with-skincare-treatment-at-2026-03-24-07-01-32-utc.webp"
-                    alt="Foto de Julieth"
-                    style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', borderRadius: 12, marginBottom: 20 }}
-                    loading="lazy"
-                  />
-                  <div style={{
-                    fontFamily: 'var(--display)', fontSize: '1.3rem', fontWeight: 200,
-                    letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 8,
-                  }}>Julieth</div>
-                  <div style={{
-                    fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.15em',
-                    textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 20,
-                  }}>Dermofarmacia y Formulación Cosmética</div>
-                  <LineReveal style={{ maxWidth: 40, marginBottom: 16 }} />
-                  <p style={{ fontSize: 12, color: 'var(--medium)', lineHeight: 1.8 }}>
-                    Ciencia · Fórmula · Activos
-                  </p>
+                <div className="story-founder-overlay">
+                  <div className="story-founder-name">Ana Cristina</div>
+                  <div className="story-founder-role">Industria cosmética y dermocosmética</div>
+                  <div className="story-founder-line" />
+                  <div className="story-founder-sig">Visión · Propósito · Estrategia</div>
                 </div>
               </div>
-            </FadeUp>
+              <div className="story-founder">
+                <img
+                  src="/img/smiling-women-relaxing-with-skincare-treatment-at-2026-03-24-07-01-32-utc.webp"
+                  alt="Julieth"
+                  className="story-founder-img"
+                  loading="lazy"
+                />
+                <div className="story-founder-overlay">
+                  <div className="story-founder-name">Julieth</div>
+                  <div className="story-founder-role">Dermofarmacia y Formulación Cosmética</div>
+                  <div className="story-founder-line" />
+                  <div className="story-founder-sig">Ciencia · Fórmula · Activos</div>
+                </div>
+              </div>
+            </div>
+          </FadeUp>
 
-            {/* ── Cierre ── */}
-            <FadeUp>
-              <p style={{
-                fontSize: 'clamp(1.1rem, 1.8vw, 1.35rem)',
-                color: 'var(--dark)', lineHeight: 1.6,
-                fontFamily: 'var(--serif)', fontStyle: 'italic',
-                textAlign: 'center', marginBottom: 16,
-              }}>
-                Y esto es solo el comienzo.
-              </p>
-            </FadeUp>
+          {/* CIERRE */}
+          <FadeUp>
+            <div className="story-centered" style={{ textAlign: 'center', marginBottom: 0 }}>
+              <p className="story-closing-text">Y esto es solo el comienzo.</p>
+            </div>
+          </FadeUp>
 
-            <FadeUp>
-              <blockquote style={{
-                margin: '0 0 16px',
-                padding: '48px 0 0',
-                borderTop: '1px solid var(--gold)',
-              }}>
-                <RevealText delay={0.06}>
-                  <p style={{
-                    fontFamily: 'var(--display)', fontSize: 'clamp(1.3rem, 3vw, 1.8rem)',
-                    fontWeight: 100, letterSpacing: '0.06em', lineHeight: 1.4,
-                    color: 'var(--dark)', textAlign: 'center',
-                  }}>
-                    "Detrás de cada gota hay cinco años de sueños, ciencia y perseverancia."
-                  </p>
-                </RevealText>
-              </blockquote>
-            </FadeUp>
-          </div>
+          <FadeUp>
+            <div className="story-final">
+              <RevealText delay={0.06}>
+                <p className="story-final-text">
+                  "Detrás de cada gota hay cinco años de sueños, ciencia y perseverancia."
+                </p>
+              </RevealText>
+            </div>
+          </FadeUp>
+
         </div>
       </section>
 
