@@ -160,7 +160,7 @@ export default function Serum() {
   const { addItem }         = useCart()
 
   const handleAdd = () => {
-    addItem({ productId: 59, quantity: qty })
+    addItem({ productId: 13, quantity: qty })
     setAdded(true)
     setTimeout(() => setAdded(false), 2200)
   }

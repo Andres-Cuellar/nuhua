@@ -2,17 +2,15 @@ const API_BASE = import.meta.env.DEV
   ? '/api/wc'
   : import.meta.env.VITE_WP_API_URL
 
-const AUTH = btoa(
-  `${import.meta.env.VITE_WC_CONSUMER_KEY}:${import.meta.env.VITE_WC_CONSUMER_SECRET}`
-)
+const QUERY = `consumer_key=${import.meta.env.VITE_WC_CONSUMER_KEY}&consumer_secret=${import.meta.env.VITE_WC_CONSUMER_SECRET}`
 
 async function request(endpoint, options = {}) {
-  const url = `${API_BASE}${endpoint}`
+  const sep = endpoint.includes('?') ? '&' : '?'
+  const url = `${API_BASE}${endpoint}${sep}${QUERY}`
   const res = await fetch(url, {
     ...options,
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Basic ${AUTH}`,
       ...options.headers,
     },
   })
@@ -71,6 +69,4 @@ export async function createOrder(lineItems, customer) {
   })
 }
 
-export const WP_SITE_URL = import.meta.env.DEV
-  ? 'https://nuhua.local'
-  : import.meta.env.VITE_WP_SITE_URL
+export const WP_SITE_URL = import.meta.env.VITE_WP_SITE_URL

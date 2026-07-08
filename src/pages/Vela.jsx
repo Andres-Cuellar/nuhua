@@ -122,7 +122,7 @@ export default function Vela() {
               <motion.button
                 className="btn btn-dark btn-lg"
                 style={{flex:2,pointerEvents:added?'none':'auto'}}
-                onClick={() => { addItem({ productId: 60, quantity: qty }); setAdded(true); setTimeout(() => setAdded(false), 2200) }}
+                onClick={() => { addItem({ productId: 14, quantity: qty }); setAdded(true); setTimeout(() => setAdded(false), 2200) }}
                 whileTap={{ scale: 0.97 }}
               >
                 {added ? '✓ Agregado' : 'Agregar al carrito'}

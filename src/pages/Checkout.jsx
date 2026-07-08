@@ -6,17 +6,17 @@ import { useCart } from '../context/CartContext'
 import { createOrder, WP_SITE_URL } from '../lib/woocommerce'
 
 const productInfo = {
-  59: {
+  13: {
     name: 'Radiance & Revitalizing Serum',
     price: 189000,
     priceLabel: '$189.000',
   },
-  60: {
+  14: {
     name: 'Ritual Candle',
     price: 89000,
     priceLabel: '$89.000',
   },
-  61: {
+  15: {
     name: 'Kit Ritual nuhua',
     price: 259000,
     priceLabel: '$259.000',

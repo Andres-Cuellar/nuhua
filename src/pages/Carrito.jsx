@@ -5,21 +5,21 @@ import { Page, FadeUp } from '../motion'
 import { useCart } from '../context/CartContext'
 
 const productInfo = {
-  59: {
+  13: {
     name: 'Radiance & Revitalizing Serum',
     image: '/img/serum-arch.webp',
     price: 189000,
     priceLabel: '$189.000',
     href: '/serum',
   },
-  60: {
+  14: {
     name: 'Ritual Candle',
     image: '/img/serum-candle-lifestyle.webp',
     price: 89000,
     priceLabel: '$89.000',
     href: '/vela',
   },
-  61: {
+  15: {
     name: 'Kit Ritual nuhua',
     image: '/img/serum-flat.webp',
     price: 259000,

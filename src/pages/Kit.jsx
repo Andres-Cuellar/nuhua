@@ -19,7 +19,7 @@ export default function Kit() {
   const { addItem }       = useCart()
 
   const handleAdd = () => {
-    addItem({ productId: 61, quantity: 1 })
+    addItem({ productId: 15, quantity: 1 })
     setAdded(true)
     setTimeout(() => setAdded(false), 2200)
   }
