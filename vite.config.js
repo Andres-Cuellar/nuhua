@@ -16,6 +16,12 @@ export default defineConfig(({ mode }) => {
           secure: true,
           rewrite: (path) => path.replace(/^\/api\/wc/, '/wp-json/wc/v3'),
         },
+        '/api/nuhua': {
+          target,
+          changeOrigin: true,
+          secure: true,
+          rewrite: (path) => path.replace(/^\/api\/nuhua/, '/wp-json/nuhua/v1'),
+        },
       },
     },
   }
